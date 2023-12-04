@@ -1,0 +1,99 @@
+*,*::before,*::after {
+   box-sizing: border-box;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   background-color: rgb(104, 107, 102);
+}
+
+.heading {
+   width: 100%;
+   margin-top: 0;
+   padding: 1em;
+   text-align: center;
+   background-color: rgb(26, 27, 26);
+   color: antiquewhite;
+}
+
+.form {
+   padding: 1em;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: flex-start;
+   align-items: baseline;
+   gap: 1em;
+}
+
+#front, #back {
+   padding: .5em;
+   border-radius: .3em;
+}
+
+.btn {
+   padding: .5em;
+   background-color: rgb(51, 88, 190);
+   border-radius: .3em;
+   cursor: pointer;
+}
+
+#clear {
+   background-color: rgb(187, 54, 54);
+}
+
+.btn:hover {
+   background-color: rgb(35, 51, 94);
+}
+
+#clear:hover {
+   background-color: rgb(104, 49, 49);
+}
+
+.main {
+   margin: 1em 1em;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+   gap: 1em;
+}
+
+.card {
+   min-height: 200px;
+   background-color: white;
+   padding: .5em;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   border-radius: .3em;
+   box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
+   position: relative;
+   transform-style: preserve-3d;
+   transition: 150ms;
+   transform: perspective(1000px) rotateY(var(--rotate-y, 0));
+}
+
+.card:hover {
+   box-shadow: 0 0 5px 2px rgba(0, 0, 0, .7);
+}
+
+.card.flipped {
+   --rotate-y: 180deg;
+}
+
+.card-front, .card-back {
+   font-size: 1.5rem;
+   position: absolute;
+   backface-visibility: hidden;
+}
+
+.card-back {
+   transform: rotateY(180deg);
+}
+
+.warning {
+   font-size: 1.3rem;
+   margin-left: 1em;
+   color: rgb(197, 45, 45);
+}

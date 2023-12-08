@@ -5,25 +5,30 @@
 body {
    margin: 0;
    padding: 0;
-   background-color: rgb(104, 107, 102);
+   background-color: rgb(215, 223, 211);
 }
 
 .heading {
    width: 100%;
    margin-top: 0;
-   padding: 1em;
+   padding: .1em;
    text-align: center;
-   background-color: rgb(26, 27, 26);
+   background-color: rgb(36, 37, 36);
    color: antiquewhite;
 }
 
+.heading h1 {
+   margin-bottom: 0;
+}
+
 .form {
+   background-color: rgb(189, 197, 185);
    padding: 1em;
    display: flex;
    flex-wrap: wrap;
    justify-content: flex-start;
    align-items: baseline;
-   gap: 1em;
+   gap: 1.5em;
 }
 
 #front, #back {
@@ -33,13 +38,14 @@ body {
 
 .btn {
    padding: .5em;
-   background-color: rgb(51, 88, 190);
+   background-color: rgb(25, 76, 214);
    border-radius: .3em;
    cursor: pointer;
+   margin: 0 .5em;
 }
 
 #clear {
-   background-color: rgb(187, 54, 54);
+   background-color: rgb(184, 31, 31);
 }
 
 .btn:hover {
@@ -47,7 +53,7 @@ body {
 }
 
 #clear:hover {
-   background-color: rgb(104, 49, 49);
+   background-color: rgb(107, 36, 36);
 }
 
 .main {
@@ -95,5 +101,27 @@ body {
 .warning {
    font-size: 1.3rem;
    margin-left: 1em;
-   color: rgb(197, 45, 45);
+   color: rgb(179, 18, 18);
+}
+
+.remove-icon {
+   width: 11%;
+   position: absolute;
+   top: 0;
+   right: 0;
+   cursor: pointer;
+}
+
+.remove-icon:hover {
+   width: 12%;
+}
+
+@media (max-width: 450px) {
+   .remove-icon {
+      width: 7%;
+   }
+
+   .remove-icon:hover {
+      width: 8%;
+   }
 }

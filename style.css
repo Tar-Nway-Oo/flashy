@@ -5,7 +5,7 @@
 body {
    margin: 0;
    padding: 0;
-   background-color: rgb(215, 223, 211);
+   background-color: rgb(248, 244, 244);
 }
 
 .heading {
@@ -14,7 +14,7 @@ body {
    padding: .1em;
    text-align: center;
    background-color: rgb(36, 37, 36);
-   color: antiquewhite;
+   color: white;
 }
 
 .heading h1 {
@@ -22,13 +22,13 @@ body {
 }
 
 .form {
-   background-color: rgb(189, 197, 185);
+   background-color: rgb(231, 229, 229);
    padding: 1em;
    display: flex;
    flex-wrap: wrap;
    justify-content: flex-start;
    align-items: baseline;
-   gap: 1.5em;
+   gap: 1em;
 }
 
 #front, #back {
@@ -38,22 +38,18 @@ body {
 
 .btn {
    padding: .5em;
-   background-color: rgb(25, 76, 214);
+   background-color: rgb(14, 142, 185);
    border-radius: .3em;
    cursor: pointer;
    margin: 0 .5em;
 }
 
 #clear {
-   background-color: rgb(184, 31, 31);
+   background-color: rgb(233, 72, 72);
 }
 
 .btn:hover {
-   background-color: rgb(35, 51, 94);
-}
-
-#clear:hover {
-   background-color: rgb(107, 36, 36);
+   padding: .6em;
 }
 
 .main {
@@ -117,6 +113,15 @@ body {
 }
 
 @media (max-width: 450px) {
+
+   .form {
+      gap: .5em;
+   }
+   
+   .form-group input {
+      width: 100%;
+   }
+
    .remove-icon {
       width: 7%;
    }
